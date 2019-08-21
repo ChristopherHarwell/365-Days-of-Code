@@ -1,0 +1,18 @@
+img{
+    position: absolute;
+    left: 0em;
+    top: 0em;
+    /* z-index: -1; */
+    
+}
+.image-style{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    transform: skewX(25);
+}
+#image-position{
+    margin-left: 1.2rem;
+    margin-top: 1rem;
+}
+
