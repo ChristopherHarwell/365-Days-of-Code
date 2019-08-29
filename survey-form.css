@@ -1,0 +1,47 @@
+html {
+  border-radius: 100px;
+}
+body {
+  text-align: center;
+@import(url https://fonts.googleapis.com/css?family=Cormorant);
+  background-color: #FAEBD7;
+}
+.name-label {
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.email-label {
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+.number-label {
+  padding-right: 6.7em;
+  margin-top: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+.dropdown-menu {
+  padding-right: 2.7em;
+}
+.checkboxes {
+  margin-bottom:1em;
+}
+#title {
+  color: #147;
+}
+#radio-desc {
+  margin-bottom: -.8em;
+}
+
+.checkboxes {
+  margin-right: 1.2em;
+}
+.checkbox-desc {
+  margin-bottom: -.01em
+}

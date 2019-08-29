@@ -1,0 +1,66 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <title>CV - Portfolio</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="survey-form.CSS">
+   <h1 id="title"> Survey Form</h1>
+  <p id="description"> a survey to rate the user experience of my web app</p>
+</head>
+
+<body>
+  <div>
+    <form for="survey-form" id="survey-form">
+      <div class="name-label">
+        <label for="name" id="name-label"> name:</label>
+        <input type="text" id="name" name="name" placeholder="full name" required>
+      </div>
+      <div class="email-label">
+        <label for"email" id="email-label"> Email: </label>
+        <input type="email" id="email" name="email" placeholder="email" required>
+      </div>
+      <div class="number-label">
+        <label for="age" id="number-label"> Age: </label>
+        <input type="number" min="1" max="120" id="number" name="age" placeholder="age" required>
+      </div>
+      <div class="dropdown-menu">
+        <p>Role:
+          <select id="dropdown" name="dropdown" class="dropdown">
+
+            <option disabled selected value>Select an option</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </p>
+      </div>
+
+      <div class="radio-btn">
+        <p id="radio-desc"> How are you enjoying my site?</p><br>
+        <label for="radio-btn1"><input id="radio-btn" type="radio" name="radio-btn" value="submit">Very Much</label>
+        <label for="radio-btn2"><input id="radio-btn" type="radio" name="radio-btn" value="submit">It's Decent</label>
+        <label for="radio-btn3"><input id="radio-btn" type="radio" name="radio-btn" value="submit">It Needs Work</label>
+      </div>
+
+      <div class="checkboxes">
+        <p class="checkbox-desc"> Please rate your experience</p>
+        <label for="checkbox1"><input type="checkbox" name="chkbox" value="submit">1-3</label>
+        <label for="checkbox2"><input type="checkbox" name="chkbox" value="submit">4-6</label>
+        <label for="checkbox3"><input type="checkbox" name="chkbox" value="submit">7-10</label>
+
+      </div>
+      <div class="textarea">
+        <textarea>Additional Comments</textarea>
+      </div>
+      <button id="submit" type="submit">Submit</button>
+  </div>
+</body>
+
+</html>
