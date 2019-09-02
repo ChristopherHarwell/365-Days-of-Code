@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="/css/master.css">
+  <style>
+    /* grid layout */
+    .container-a {
+      display: grid;
+      /*makes the .container a grid*/
+      grid-template-columns: 100px auto 100px;
+      /*Specifies the columns for the grid layout.....Specifies how many colums, and how wide we want them to be*/
+      grid-template-rows: 50px 50px 100px;
+      /*Specifies the rowsfor the grid layout.....Specifies how many rows and how tall we want them to be*/
+      grid-gap: 3px;
+    }
+
+    .container-b {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* first parameter is the amount of columns, the second is the size of elements */
+      grid-template-rows: repeat(3, 50px); /* first parameter is the amount of rows, the second is the size of elements */
+      grid-gap: 3px;
+      margin-bottom: 50px;
+    }
+
+    .container-c {
+      display: grid;
+      grid-template: repeat(3, 50px) / repeat(2, 1fr); /* Shorthand to achieve the same results as .container-b (the first one is rows, the second is columns)*/
+      grid-gap: 3px;
+
+    }
+
+    .even {
+      border: 1px;
+      border-style: solid;
+      background-color: blue;
+    }
+
+    .odd {
+      border: 1px;
+      border-style: solid;
+      background-color: red;
+    }
+
+    /* End of Grid layout */
+
+
+    /*Grid Positioning*/
+    .container-d {
+      display: grid;
+      grid-gap: 3px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 40px 40px 200px;
+    }
+
+    .header {
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      border: 1px;
+      border-style: solid;
+      background-color: green;
+    }
+
+    .menu {
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      border: 1px;
+      border-style: solid;
+      background-color: yellow;
+    }
+
+    .content {
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+      border: 1px;
+      border-style: solid;
+      background-color: red;
+    }
+
+    .footer {
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      border: 1px;
+      border-style: solid;
+      background-color: blue;
+    }
+
+    /* CONTAINER-E */
+
+    .container-e {
+      display: grid;
+      grid-gap: 3px;
+
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 100px 100px;
+
+    }
+    .box-a {
+      grid-column-start: 2;
+      grid-column-end: 3;
+
+      border: 1px;
+      border-style: solid;
+      background-color: purple;
+    }
+
+    .box-b {
+      grid-column-start: 2;
+      grid-column-end: 3;
+
+      border: 1px;
+      border-style: solid;
+      background-color: orange;
+    }
+    /* End Container-e */
+
+    .container-f {
+      display: grid;
+      grid-gap: 3px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 40px 40px 200px;
+    }
+
+    .header-2{
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      border: 1px;
+      border-style: solid;
+      background-color: green;
+    }
+
+    .menu-2 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      border: 1px;
+      border-style: solid;
+      background-color: yellow;
+    }
+
+    .content-2 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+
+      border: 1px;
+      border-style: solid;
+      background-color: red;
+    }
+    .container-f-0 {
+      display: grid;
+      grid-gap: 3px;
+      grid-template-columns: repeat(2, 300px);
+      grid-template-rows: 100px 100px;
+    }
+
+    .box-1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      border: 1px;
+      border-style: solid;
+      background-color: purple;
+    }
+
+    .box-2 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      border: 1px;
+      border-style: solid;
+      background-color: orange;
+    }
+
+    .footer-2 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      border: 1px;
+      border-style: solid;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1> container-a</h1>
+  <div class="container-a">
+    <div class="odd">1</div>
+    <div class="even">2</div>
+    <div class="odd">3</div>
+    <div class="even">4</div>
+    <div class="odd">5</div>
+    <div class="even">6</div>
+  </div>
+
+  <h1> container-b</h1>
+  <div class="container-b">
+    <div class="odd">1</div>
+    <div class="even">2</div>
+    <div class="odd">3</div>
+    <div class="even">4</div>
+    <div class="odd">5</div>
+    <div class="even">6</div>
+  </div>
+
+  <h1> container-c</h1>
+  <div class="container-c">
+    <div class="odd">1</div>
+    <div class="even">2</div>
+    <div class="odd">3</div>
+    <div class="even">4</div>
+    <div class="odd">5</div>
+    <div class="even">6</div>
+  </div>
+
+  <h1> container-d</h1>
+  <div class="container-d">
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+    <div class="content">CONTENT</div>
+    <div class="footer">FOOTER</div>
+  </div>
+
+  <h1> container-e </h1>
+  <div class="container-e">
+    <div class="box-a">BOX-A</div>
+    <div class="box-b">BOX-B</div>
+  </div>
+
+  <h1> container-f</h1>
+  <div class="container-f">
+    <div class="header-2">HEADER</div>
+    <div class="menu-2">MENU</div>
+    <div class="content-2">CONTENT</div>
+
+
+    <div class="container-f-0">
+      <div class="box-a">BOX-1</div>
+      <div class="box-b">BOX-2</div>
+    </div>
+
+    <div class="footer-2">FOOTER</div>
+  </div>
+
+  <div class="container-f-0">
+    <div class="box-a">BOX-1</div>
+    <div class="box-b">BOX-2</div>
+  </div>
+</body>
+
+</html>
