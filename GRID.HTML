@@ -45,6 +45,7 @@
 
 
     /*Grid Positioning*/
+    /*Container-d*/
     .container-d {
       display: grid;
       grid-gap: 3px;
@@ -118,6 +119,7 @@
     }
     /* End Container-e */
 
+    /*Fraction units and repeat*/
     /* Container-f*/
     .container-f {
       display: grid;
@@ -181,6 +183,7 @@
     }
       /* End Container-f */
 
+      /*Positioning items;*/
       /*Container g*/
       .container-g {
         display: grid;
@@ -227,6 +230,7 @@
       }
       /*End container-g*/
 
+      /*template areas*/
       /*Container h*/
       .container-h {
         height: 100%;
@@ -273,6 +277,85 @@
         border-style: solid;
         background-color: blue;
       }
+
+
+      /*Auto-fit and minmax*/
+      /* Container-i*/
+      .container-i{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+        grid-template-rows: repeat(2, 100px);
+
+      }
+
+      /*Implicit Rows*/
+      /*container-j*/
+      .container-j{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+        grid-template-rows: repeat(2, 100px); /*Can remove this line of code*/
+        grid-auto-rows: 100px;
+
+      }
+
+
+      /*come back to this later
+      https://www.youtube.com/watch?v=t6CBKf8K_Ac&t=268s
+      @29:07 minutes*/
+
+      /*Image Grid*/
+      /*Container-k*/
+      .container-k{
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+        grid-auto-rows: 75px;
+      }
+
+      .horizontal {
+
+      }
+
+      .vertical {}
+
+      .big {}
+
+    /*Named lines:
+    a way of positioning and sizing items on the Grid
+
+    /*look at CSS folder in Desktop for a live example of this */
+
+    /*for future clarification:
+    https://scrimba.com/p/pWqLHa/cvNJyHd*/
+    /*
+    container-l
+    */
+    .container-l{
+      height: 100%;
+      display: grid;
+      grid-gap: 3px;
+      grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+      grid-template-rows: [main-start] 40px [content-start] auto [content-end]  40px [main-end];
+    }
+
+    .header {
+      /*grid-column: 1/3;
+      grid-column: main-start / main-end; */
+      grid-column: main; /* All of these CSS Rules in .header to the same thing*/
+    }
+
+    .menu{}
+
+    .content {
+      grid-column: content-start / content-end;
+      /*grid-column: 2 / 3; this does the same thing as the above rule */
+    }
+
+    .footer {
+      grid-column: main-start / main-end;
+    }
   </style>
 </head>
 
@@ -355,6 +438,47 @@
     <div class="menu-4">MENU</div>
     <div class="content-4">CONTENT</div>
     <div class="footer-4">FOOTER</div>
+  </div>
+
+  <h1> container-i</h1>
+  <div class="container-i">
+    <div class="odd">1</div>
+    <div class="even">2</div>
+    <div class="odd">3</div>
+    <div class="even">4</div>
+    <div class="odd">5</div>
+    <div class="even">6</div>
+    <div class="odd">7</div>
+    <div class="even">8</div>
+    <div class="odd">9</div>
+    <div class="even">10</div>
+    <div class="odd">11</div>
+    <div class="even">12</div>
+  </div>
+
+  <h1> container-j</h1>
+  <div class="container-j">
+    <div class="odd">1</div>
+    <div class="even">2</div>
+    <div class="odd">3</div>
+    <div class="even">4</div>
+    <div class="odd">5</div>
+    <div class="even">6</div>
+    <div class="odd">7</div>
+    <div class="even">8</div>
+    <div class="odd">9</div>
+    <div class="even">10</div>
+    <div class="odd">11</div>
+    <div class="even">12</div>
+  </div>
+
+
+  <h1> container-l</h1>
+  <div class="container-l">
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+    <div class="content">CONTENT</div>
+    <div class="footer">FOOTER</div>
   </div>
 </body>
 
