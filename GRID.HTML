@@ -338,24 +338,213 @@
       grid-gap: 3px;
       grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
       grid-template-rows: [main-start] 40px [content-start] auto [content-end]  40px [main-end];
+
+
+      border: 1px;
+      border-style: solid;
+      background-color: #ffeead;
     }
 
-    .header {
+    .header-5 {
       /*grid-column: 1/3;
       grid-column: main-start / main-end; */
       grid-column: main; /* All of these CSS Rules in .header to the same thing*/
+
+      border: 1px;
+      border-style: solid;
+      background-color: #96ceb4;
     }
 
-    .menu{}
+    .menu-5{
+      border: 1px;
+      border-style: solid;
+      background-color: #ff6f69;
 
-    .content {
+    }
+
+    .content-5 {
       grid-column: content-start / content-end;
       /*grid-column: 2 / 3; this does the same thing as the above rule */
+
+      border: 1px;
+      border-style: solid;
+      background-color: #88d8b0;
+
     }
 
-    .footer {
+    .footer-5 {
       grid-column: main-start / main-end;
+
+      border: 1px;
+      border-style: solid;
+      background-color: #ffcc5c;
     }
+
+    /*How to justify and align ALL the content in a grid*/
+    /*Container-m*/
+    .container-m{
+      border: 1px solid black;
+      height: 100%;
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: repeat(2, 100px);
+
+      justify-content: space-around;
+      align-content: center;
+
+      padding: 100px 100px;
+      margin-top: 10px;
+      border: 1px;
+      border-style: solid;
+      background-color: #ffeead;
+    }
+
+    /*How to Justify and align items in the grid*/
+    /*Container-n*/
+    .container-n{
+      height: 100%;
+      display: grid;
+      grid-gap: 3px;
+
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 40px auto 40px;
+
+
+      align-items: start;
+
+      border: 1px;
+      border-style: solid;
+      padding: 50px 50px;
+    }
+
+    .header-6 {
+      grid-column: 1 / -1;
+
+      justify-self:center;
+      align-self: center;
+
+      border: 1px;
+      border-style: solid;
+      background-color: #96ceb4;
+    }
+
+    .menu-6{
+      grid-column: 1 / 3;
+
+      justify-self:center;
+      align-self: center;
+
+      border: 1px;
+      border-style: solid;
+      background-color: #ff6f69;
+    }
+
+    .content-6{
+      grid-column: 3 / -1;
+
+      justify-self:stretch;
+      align-self: center;
+
+      border: 1px;
+      border-style: solid;
+      background-color: #88d8b0;
+    }
+
+    .footer-6{
+      grid-column: 1 / -1;
+
+      border: 1px;
+      border-style: solid;
+      background-color: #ffcc5c;
+    }
+
+    /*Difference between auto-fit and auto-fill */
+    /*Container-o*/
+
+    /*Auto-fit*/
+    .container-o{
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+
+    border: 1px;
+    border-style: solid;
+
+    }
+    /*Auto-fill*/
+    .container-o-1{
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+
+    border: 1px;
+    border-style: solid;
+    }
+
+    /*Creating an article layout*/
+    /*container-p*/
+
+    .container-p{
+
+    }
+
+    /*Grid vs flexbox*/
+    /*Container-q*/
+    /*For more depth visit:
+    https://scrimba.com/p/pWqLHa/cZgMGt4
+    and / or
+    https://www.youtube.com/watch?v=t6CBKf8K_Ac&t=268s
+    @58:34*/
+    .container-q{
+
+    }
+
+    .header-7 {
+      grid-column: 1 / -1;
+
+      justify-self:center;
+      align-self: center;
+
+      border: 1px;
+      border-style: solid;
+      background-color: #96ceb4;
+    }
+
+    .menu-7{
+      grid-column: 1 / 3;
+
+      justify-self:center;
+      align-self: center;
+
+      border: 1px;
+      border-style: solid;
+      background-color: #ff6f69;
+    }
+
+    .content-7{
+      grid-column: 3 / -1;
+
+      justify-self:stretch;
+      align-self: center;
+
+      border: 1px;
+      border-style: solid;
+      background-color: #88d8b0;
+    }
+
+    .footer-7{
+      grid-column: 1 / -1;
+
+      border: 1px;
+      border-style: solid;
+      background-color: #ffcc5c;
+    }
+
   </style>
 </head>
 
@@ -395,7 +584,7 @@
     <div class="header">HEADER</div>
     <div class="menu">MENU</div>
     <div class="content">CONTENT</div>
-    <div class="footer">FOOTER</div>
+    <div class="footer">FOOspace-evenlyTER</div>
   </div>
 
   <h1> container-e </h1>
@@ -417,7 +606,7 @@
     </div>
 
     <div class="footer-2">FOOTER</div>
-  </div>
+  </div>grid-column:
 
   <div class="container-f-0">
     <div class="box-a">BOX-1</div>
@@ -475,11 +664,62 @@
 
   <h1> container-l</h1>
   <div class="container-l">
-    <div class="header">HEADER</div>
-    <div class="menu">MENU</div>
-    <div class="content">CONTENT</div>
-    <div class="footer">FOOTER</div>
+    <div class="header-5">HEADER</div>
+    <div class="menu-5">MENU</div>
+    <div class="content-5">CONTENT</div>
+    <div class="footer-5">FOOTER</div>
   </div>
+
+  <div class="container-m">
+    <div class="odd">1</div>
+    <div class="even">2</div>
+    <div class="odd">3</div>
+    <div class="even">4</div>
+    <div class="odd">5</div>
+    <div class="even">6</div>
+  </div>
+
+  <h1> container-n</h1>
+  <div class="container-n">
+    <div class="header-6">HEADER</div>
+    <div class="menu-6">MENU</div>
+    <div class="content-6">CONTENT</div>
+    <div class="footer-6">FOOTER</div>
+  </div>
+
+
+  <h1>Container-o</h1>
+  <h3>AUTO-FIT</h3>
+  <div class="container-o">
+    <div class="odd">1</div>
+    <div class="even">2</div>
+    <div class="odd">3</div>
+    <div class="even">4</div>
+  </div>
+
+  <h3>AUTO-FILL</h3>
+  <div class="container-o-1">
+    <div class="odd">1</div>
+    <div class="even">2</div>
+    <div class="odd">3</div>
+    <div class="even">4</div>
+    </div>
+
+    <p>FLEXBOX HEADER</p>
+      <div class="flexbox-header">
+          <div>HOME</div>
+          <div>SEARCH</div>
+          <div>LOGOUT</div>
+      </div>
+      <br>
+      <p>GRID PAGE</p>
+      <div class="grid-page">
+          <div class="header-7">HEADER</div>
+          <div class="menu-7">MENU</div>
+          <div class="content-7">CONTENT</div>
+          <div class="footer-7">FOOTER</div>
+      </div>
+
 </body>
 
 </html>
